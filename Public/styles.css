@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    background: radial-gradient(circle, #1e1e1e 50%, #3a3a3a 100%);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background: #fff;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+}
+
+.hour {
+    width: 6px;
+    height: 50px;
+    background: #f39c12;
+}
+
+.minute {
+    width: 4px;
+    height: 70px;
+    background: #3498db;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    background: #e74c3c;
+}
+
+.millisecond {
+    width: 1px;
+    height: 100px;
+    background: #2ecc71;
+}
+
+.center-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ticks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.tick {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #fff;
+    top: 10;
+    left: 50%;
+    transform-origin:bottom center; /* Align the ticks to rotate around the bottom center */
+    opacity: 0.3; /* Default dim light */
+    transition: opacity 0.9s; /* Smooth transition */
+}
+
+.tick.active {
+    opacity: 1; /* Bright when active */
+}
+
+.digital-clock {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #28e90e;
+}
